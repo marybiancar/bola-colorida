@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Círculo de Cores Aleatórias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="circulo" id="meuCirculo">
+        Passe o mouse!
+    </div>
+
+    <script>
+        const circulo = document.getElementById('meuCirculo');
+
+        function gerarCorAleatoria() {
+            const letras = '0123456789ABCDEF';
+            let cor = '#';
+            for (let i = 0; i < 6; i++) {
+                cor += letras[Math.floor(Math.random() * 16)];
+            }
+            return cor;
+        }
+
+        circulo.addEventListener('mouseenter', () => {
+            circulo.style.backgroundColor = gerarCorAleatoria();
+        });
+    </script>
+</body>
+</html>

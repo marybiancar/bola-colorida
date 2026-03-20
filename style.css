@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.circulo {
+    /* Dimensões iguais para ser um círculo */
+    width: 250px;
+    height: 250px;
+    
+    /* O segredo do formato redondo */
+    border-radius: 50%; 
+    
+    background-color: #2ecc71;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    
+    /* Suavidade na transição de cor */
+    transition: background-color 0.4s ease, transform 0.2s ease;
+    
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    user-select: none; /* Evita selecionar o texto ao passar o mouse */
+}
+
+/* Um bônus: leve aumento ao passar o mouse */
+.circulo:hover {
+    transform: scale(1.05);
+}
